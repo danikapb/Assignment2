@@ -47,6 +47,9 @@ public class Method {
             //do nothing, skip this method if it is not parsable
         }
     }
+    public boolean problemParsing(){
+        return md == null;
+    }
 
     private void calculateMcCabe() {
         if (sourceCode == null) {

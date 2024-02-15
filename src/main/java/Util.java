@@ -23,7 +23,7 @@ public class Util {
         ArrayList<String[]> rows = new ArrayList<String[]>();
         for (File file : fileList) {
             Method method = new Method(file);
-            if (!method.hasNoInitialCommit()) {
+            if (!method.hasNoInitialCommit() && !method.problemParsing()) {
                 String[] methodRow = {method.getFileName(), String.valueOf(method.getSize()), String.valueOf(method.getMcCabe())};
                 rows.add(methodRow);
             }
